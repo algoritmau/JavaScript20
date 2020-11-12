@@ -1,0 +1,232 @@
+:root {
+	--color-black: #141414;
+	--color-black-tint: #3a3a3a;
+	--color-black-shade: hsl(0, 0%, 0%);
+	--color-white: #fefefe;
+	--color-grey-light: hsl(0, 0%, 89%);
+
+	--font-heading: 'Bitter', sans-serif;
+	--font-body: 'Oxygen', sans-serif;
+}
+
+/* Base styles */
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+*::selection {
+	background-color: var(--color-black);
+	color: var(--color-white);
+}
+
+body {
+	font-family: var(--font-body);
+	font-weight: 400;
+	font-size: 1.6rem;
+	-webkit-font-smoothing: antialiased;
+	line-height: 1.7;
+	color: var(--color-black);
+	background-color: var(--color-white);
+	background: url('./img/pexels-zydeaosika-4138976.jpg') fixed no-repeat;
+	background-size: cover;
+	height: 100vh;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+a {
+	text-decoration: none;
+}
+
+.heading-1,
+.heading-2,
+.heading-4 {
+	font-family: var(--font-heading);
+}
+
+.heading-1 {
+	font-size: 5.6rem;
+	color: var(--color-black);
+	line-height: 1.4;
+}
+
+/* Typography styles */
+.quote__text {
+	font-family: var(--font-heading);
+	font-weight: 600;
+	font-style: italic;
+	font-size: 2.8rem;
+	line-height: 1.6;
+	position: relative;
+}
+
+.quote__text::before {
+	content: '“';
+	position: absolute;
+	z-index: -1;
+	font-size: 16rem;
+	top: -7.2rem;
+	left: -3.2rem;
+	color: var(--color-grey-light);
+}
+
+.quote__author {
+	font-family: var(--font-body);
+	font-weight: 400;
+	font-size: 2rem;
+	text-align: right;
+}
+
+.cta {
+	font-family: var(--font-body);
+	font-size: 1.6rem;
+}
+
+/* Layout styles */
+.app {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	background: inherit;
+	border-radius: 8px;
+	width: 80vw;
+	max-width: 80rem;
+	padding: 4rem;
+	overflow: hidden;
+}
+
+.app::before {
+	content: '';
+	position: absolute;
+	width: 110%;
+	height: 110%;
+	top: -25px;
+	left: -25px;
+	background: inherit;
+	filter: blur(8px);
+	box-shadow: inset 0 0 0 2000px rgba(255, 255, 255, 0.4);
+}
+
+.quote {
+	z-index: 100;
+	margin-block-end: 3.2rem;
+}
+
+.quote__text {
+	margin-block-end: 1.6rem;
+}
+
+/* CTA Styles */
+.cta {
+	border: 1px solid var(--color-black);
+	border-radius: 4px;
+	font-family: var(--font-body);
+	display: inline-block;
+	height: 5.6rem;
+	cursor: pointer;
+	background-color: var(--color-black);
+	color: var(--color-white);
+	transition: all 0.4s;
+}
+
+.cta:hover {
+	background-color: var(--color-black-shade);
+	border-color: var(--color-black-shade);
+}
+
+.buttons {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1.6rem;
+	z-index: 100;
+}
+
+.button__share-twitter,
+.button__new-quote {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.button__share-twitter {
+	padding: 0 1.6rem;
+}
+
+.button__new-quote {
+	padding: 0 2.4rem;
+}
+
+/* Loader styles */
+.lds-ripple {
+	display: inline-block;
+	position: relative;
+	width: 80px;
+	height: 80px;
+}
+
+.lds-ripple div {
+	position: absolute;
+	border: 4px solid var(--color-grey-light);
+	opacity: 1;
+	border-radius: 50%;
+	animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+.lds-ripple div:nth-child(2) {
+	animation-delay: -0.5s;
+}
+
+@keyframes lds-ripple {
+	0% {
+		top: 36px;
+		left: 36px;
+		width: 0;
+		height: 0;
+		opacity: 1;
+	}
+
+	100% {
+		top: 0px;
+		left: 0px;
+		width: 72px;
+		height: 72px;
+		opacity: 0;
+	}
+}
+
+.hidden {
+	display: none;
+}
+
+@media screen and (max-width: 760px) {
+	body {
+		background: url('./img/pexels-zydeaosika-4138976_pb2uiz.jpg') fixed
+			no-repeat;
+		background-size: cover;
+	}
+
+	.quote__text {
+		font-size: 2.4rem;
+	}
+
+	.quote__author {
+		font-size: 1.8rem;
+	}
+}

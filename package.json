@@ -1,0 +1,9 @@
+{
+  "name": "vanilla-js-random-projects",
+  "version": "1.0.0",
+  "description": "Repo for 20 random small pure-JavaScript projects for practicing purposes",
+  "main": "index.js",
+  "repository": "https://github.com/spaceinvadev/vanilla-js-random-projects.git",
+  "author": "Mauricio Paternina <spaceinvadev@gmail.com>",
+  "license": "MIT"
+}
