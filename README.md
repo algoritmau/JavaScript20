@@ -4,4 +4,4 @@ This is a collection of 20 small projects I coded to practice pure JavaScript co
 
 ## Projects
 
-1. [Quote Generator]('./quote-generator'). This is a small app to fetch random quotes from an API via an async/await function.
+1. [Quote Generator]('/projects/quote-generator'). This is a small app to fetch random quotes from an API via an async/await function.
