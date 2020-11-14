@@ -39,8 +39,13 @@ function renderPhotos() {
 
     // Create figcaption element
     const figcaption = document.createElement('figcaption');
+    const figcaptionTextNode = document.createTextNode('Photo by ');
+    const figcaptionTextNode2 = document.createTextNode(' on ');
+    figcaption.appendChild(figcaptionTextNode);
+    figcaption.appendChild(photographerProfileLink);
+    figcaption.appendChild(figcaptionTextNode2);
+    figcaption.appendChild(unsplashLink);
     figcaption.classList.add('photo__credits');
-    figcaption.textContent = `Photo by ${photographerProfileLink} on ${unsplashLink}`;
 
     // Create <img> for photo
     const photoImage = document.createElement('img');
@@ -55,6 +60,7 @@ function renderPhotos() {
     const photoContainer = document.createElement('figure');
     photoContainer.classList.add('photo-container');
     photoContainer.appendChild(photoImage);
+    photoContainer.appendChild(figcaption);
 
     photosContainer.appendChild(photoContainer);
   });
