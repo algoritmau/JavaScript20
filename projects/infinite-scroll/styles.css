@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque&family=IBM+Plex+Sans+Condensed:wght@500&display=swap');
+
+:root {
+  --color-black: #141414;
+  --color-black-tint: #3a3a3a;
+  --color-black-shade: hsl(0, 0%, 0%);
+  --color-white: #fefefe;
+  --color-grey-light: hsl(0, 0%, 89%);
+
+  --font-heading: 'IBM Plex Sans Condensed', sans-serif;
+  --font-body: 'Darker Grotesque', sans-serif;
+}
+
+/* Base styles */
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*::selection {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 1.6rem;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.7;
+  color: var(--color-black);
+  background-color: var(--color-white);
+  height: 100vh;
+  position: relative;
+}
+
+.heading-1,
+.heading-2,
+.heading-4 {
+  font-family: var(--font-heading);
+}
+
+.heading-1 {
+  font-size: 5.6rem;
+  color: var(--color-black);
+  line-height: 1.4;
+  text-align: center;
+  margin: 6.4rem auto;
+}
+
+.photos-container {
+  width: 72vw;
+  max-width: 96rem;
+  margin: 0 auto 6.4rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  justify-content: center;
+}
+
+.photo {
+  position: relative;
+}
+
+.photo__image {
+  width: 100%;
+}
+
+.photo__credits {
+  position: absolute;
+  bottom: 2.4rem;
+  right: 2.4rem;
+  text-align: center;
+  font-size: 2rem;
+  background-color: rgba(0, 0, 0, 0.64);
+  color: var(--color-white);
+  border-radius: 4px;
+  padding: 0.8rem 2rem;
+}
+
+.photo__credits a {
+  color: var(--color-grey-light);
+}
+
+/* Loader styles */
+.loader {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #00000040;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  .heading-1 {
+    margin: 4rem auto;
+    font-size: 3.6rem;
+    max-width: 80vw;
+  }
+}
