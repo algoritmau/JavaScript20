@@ -45,6 +45,29 @@ body {
   position: relative;
 }
 
+/* Custom scrollbar styles */
+body::-webkit-scrollbar {
+  inline-size: 8px;
+  background-color: var(--color-grey-light);
+}
+
+body::-webkit-scrollbar-track {
+  border-radius: 8px;
+  background-color: hsla(0, 0%, 0%, 0.1);
+  border: 1px solid hsl(0, 0%, 80%);
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background: var(--color-black);
+  border: 1px solid var(--color-black);
+}
+
+body::-webkit-scrollbar-thumb:hover,
+body::-webkit-scrollbar-thumb:active {
+  background: var(--color-black-shade);
+}
+
 .heading-1,
 .heading-2,
 .heading-4 {
