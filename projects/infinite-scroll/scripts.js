@@ -1,5 +1,5 @@
 const photosContainer = document.querySelector('.photos-container');
-const loader = document.querySelector('.loader');
+const loader = document.getElementById('loader');
 let photos;
 let shouldLoadMorePhotos = false;
 let photosLoaded = 0;
@@ -35,6 +35,7 @@ function checkPhotoLoaded() {
 
   if (photosLoaded === totalPhotos) {
     shouldLoadMorePhotos = true;
+    loader.classList.add('hidden');
   }
 }
 
