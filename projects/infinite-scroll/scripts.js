@@ -1,11 +1,26 @@
 const photosContainer = document.querySelector('.photos-container');
 const loader = document.querySelector('.loader');
 let photos;
+let shouldLoadMorePhotos = false;
+let photosLoaded = 0;
+let totalPhotos = 0;
 
 // API-related variables
 const API_ACCESS_KEY = 'TXKEQ8CyVzrzrkp8bYoikXi50Umc7pzsY4Os1uqYnWU';
 const PHOTOS_REQUESTED = 10;
 const API_URL = `https://api.unsplash.com/photos/random/?client_id=${API_ACCESS_KEY}&count=${PHOTOS_REQUESTED}`;
+
+// Calculate scroll height
+function getScrollHeight() {
+  return Math.max(
+    document.body.scrollHeight,
+    document.documentElement.scrollHeight,
+    document.body.offsetHeight,
+    document.documentElement.offsetHeight,
+    document.body.clientHeight,
+    document.documentElement.clientHeight
+  );
+}
 
 // Set attributes on an given element
 function setAttributes(element, attributes) {
@@ -14,8 +29,20 @@ function setAttributes(element, attributes) {
   }
 }
 
+// Check if all photos have finished loading
+function checkPhotoLoaded() {
+  photosLoaded++;
+
+  if (photosLoaded === totalPhotos) {
+    shouldLoadMorePhotos = true;
+  }
+}
+
 // Create elements for links and photos
 function renderPhotos() {
+  photosLoaded = 0;
+  totalPhotos = photos.length;
+
   photos.forEach((photo) => {
     // Create link for photographer profile and set attributes to it
     const photographerProfileLink = document.createElement('a');
@@ -56,6 +83,9 @@ function renderPhotos() {
     });
     photoImage.classList.add('photo__image');
 
+    // Check when each image has loaded
+    photoImage.addEventListener('load', checkPhotoLoaded);
+
     // Create <figure> element
     const photoContainer = document.createElement('figure');
     photoContainer.classList.add('photo-container');
@@ -76,6 +106,19 @@ async function getPhotos() {
     console.log(error);
   }
 }
+
+// Check if scrolling near bottom
+window.addEventListener('scroll', () => {
+  let currentScrollHeight = getScrollHeight();
+
+  if (
+    window.pageYOffset >= currentScrollHeight * 0.85 &&
+    shouldLoadMorePhotos
+  ) {
+    shouldLoadMorePhotos = false;
+    getPhotos();
+  }
+});
 
 // On load
 getPhotos();
