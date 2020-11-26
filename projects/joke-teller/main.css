@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Cousine&display=swap');
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #010001;
+}
+
+.joke-teller-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3.2rem;
+  margin-block-end: 4rem;
+}
+
+.joke-teller__cta {
+  border: none;
+  height: 5.6rem;
+  padding: 0 2.4rem;
+  font-family: 'Cousine', monospace;
+  font-size: 1.6rem;
+  background-color: #6ed1ff;
+  border-radius: 2px;
+  color: #010001;
+  cursor: pointer;
+  transition: background-color 0.4s;
+}
+
+.joke-teller__cta:hover,
+.joke-teller__cta:active {
+  background-color: #5cb0d6;
+}
