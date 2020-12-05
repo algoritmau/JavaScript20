@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Theme Switch</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/solid.min.css"
+    />
+    <link rel="stylesheet" href="../../styles/base.css" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="header__logo__link">
+        <img
+          src="./img/logo-white-background.png"
+          alt="Logo del Gran Malecón"
+          height="48"
+        />
+      </a>
+      <nav class="header__nav">
+        <a href="#hero" class="header__nav__item">Inicio</a>
+        <a href="#features" class="header__nav__item">Sectores</a>
+        <a href="#rules" class="header__nav__item">Normativa</a>
+        <div class="theme-manager">
+          <img
+            class="theme-manager__icon theme-manager__icon--light"
+            src="https://img.icons8.com/ios-glyphs/30/000000/sun--v1.png"
+          />
+          <img
+            class="theme-manager__icon theme-manager__icon--dark"
+            src="https://img.icons8.com/ios-glyphs/30/fefefe/moon.png"
+            hidden
+          />
+          <label class="theme-manager__switch">
+            <input type="checkbox" />
+            <div class="slider round"></div>
+            </svg>
+          </label>
+        </div>
+      </nav>
+      <!-- TODO: Add mobile navigation menu -->
+    </header>
+
+    <section class="full-section hero" id="hero">
+      <h1 class="hero__title">
+        <span class="hero__title--primary">Gran Malecón del Río</span>
+        <span class="hero__title--secondary">
+          Barranquilla le volvió a dar la cara al río, ícono de transformación
+          de ciudad.
+        </span>
+      </h1>
+    </section>
+
+    <section class="full-section features" id="features">
+      <h2 class="full-section__title">Sectores</h2>
+      <p class="full-section__subtitle">
+        Estratégicamente, se ha dividido el proyecto por 4 unidades funcionales
+        de acuerdo con su vocación:
+      </p>
+      <div class="features-grid">
+        <div class="feature-card">
+          <h3 class="feature-card__title">Gastronomía</h3>
+          <picture class="feature-card__img-container">
+            <img
+              src="./img/undraw_special_event_4aj8.svg"
+              alt="Illustration of a couple having dinner"
+              class="feature-card__img"
+              id="feature-card__img-1"
+            />
+          </picture>
+          <p class="feature-card__desc">
+            Debido a su cercanía a Puerta de Oro, la unidad funcional 1 es un
+            nodo comercial. En sus treinta metros de ancho contará con plazas,
+            zonas verdes y espacios comerciales.
+          </p>
+        </div>
+        <div class="feature-card">
+          <h3 class="feature-card__title">Recreación</h3>
+          <picture class="feature-card__img-container">
+            <img
+              src="./img/undraw_children_4rtb.svg"
+              alt="Illustration of three children playing with a rope"
+              class="feature-card__img"
+              id="feature-card__img-2"
+            />
+          </picture>
+          <p class="feature-card__desc">
+            La unidad funcional 2 es un gran parque de 50 metros de ancho con
+            plazas, que incluyen mil árboles nuevos. Este nodo representa un
+            encuentro ciudadano invaluable, convirtiéndose en un espacio verde
+            de la ciudad.
+          </p>
+        </div>
+        <div class="feature-card">
+          <h3 class="feature-card__title">Deportividad</h3>
+          <picture class="feature-card__img-container">
+            <img
+              src="./img/undraw_finish_line_katerina_limpitsouni_xy20.svg"
+              alt="Illustration of a woman getting to the finish line of a race"
+              class="feature-card__img"
+              id="feature-card__img-3"
+            />
+          </picture>
+          <p class="feature-card__desc">
+            La unidad 3 es el nodo deportivo, que cuenta con cuatro canchas de
+            fútbol y dos canchas sintéticas en las que se fomenta la práctica
+            del deporte. Cuenta con locales comerciales para atender las
+            necesidades de los usuarios.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="full-section rules-section" id="rules">
+      <h2 class="full-section__title">Reglamento General</h2>
+      <div class="rules-container">
+        <div class="rules rules--dos">
+          <h3 class="rules__title">Nuestros visitantes tendrán permitido:</h3>
+          <ul class="rules-list">
+            <li class="rule">
+              <img
+                class="rule__icon"
+                src="https://img.icons8.com/fluent/48/000000/nature.png"
+              />
+              <span class="rule__text"
+                >Disfrutar del Malecón, cuando este esté abierto al
+                público.</span
+              >
+            </li>
+            <li class="rule">
+              <img
+                class="rule__icon"
+                src="https://img.icons8.com/fluent/48/000000/spring.png"
+              />
+              <span class="rule__text"
+                >Disfrutar de los jardines sin pisar ni recoger flores.</span
+              >
+            </li>
+            <li class="rule">
+              <img
+                class="rule__icon"
+                src="https://img.icons8.com/fluent/48/000000/park-bench.png"
+              />
+              <span class="rule__text"
+                >Usar una silla o un asiento en un banco diseñado para
+                compartir.</span
+              >
+            </li>
+            <li class="rule">
+              <img
+                class="rule__icon"
+                src="https://img.icons8.com/fluent/48/000000/filled-trash.png"
+              />
+              <span class="rule__text"
+                >Depositar los desechos en la basura o en los cubículos de
+                reciclaje.</span
+              >
+            </li>
+            <li class="rule">
+              <img
+                class="rule__icon"
+                src="https://img.icons8.com/fluent/48/000000/dog.png"
+              />
+              <span class="ule__text">
+                Pasear a tu perro, con correa y no sobre el césped y limpiar sus
+                desechos.
+              </span>
+            </li>
+            <li class="rule">
+              <img
+                class="rule__icon"
+                src="https://img.icons8.com/fluent/48/000000/camera.png"
+              />
+              <span class="rule__text">
+                Para tomar fotos de recuerdo, compartir en familia y apreciar la
+                vista del río.
+              </span>
+            </li>
+          </ul>
+        </div>
+        <div class="rules__ruler"></div>
+        <div class="rules rules--donts">
+          <h3 class="rules__title">
+            Por el bienestar de todos, está prohibido:
+          </h3>
+          <ul class="rules-list">
+            <li class="rule">
+              <img
+                class="rule__icon"
+                src="https://img.icons8.com/fluent/48/000000/moonshine-jug.png"
+              />
+              <span class="rule__text"
+                >El uso de drogas y consumo de alcohol.</span
+              >
+            </li>
+            <li class="rule">
+              <img
+                class="rule__icon"
+                src="https://img.icons8.com/fluent/48/000000/campfire.png"
+              />
+              <span class="rule__text"
+                >Llamas abiertas, así como cocinar y asar a la parrilla.</span
+              >
+            </li>
+            <li class="rule">
+              <img
+                class="rule__icon"
+                src="https://img.icons8.com/fluent/48/000000/sea-waves.png"
+              />
+              <span class="rule__text">Bañarse en el río.</span>
+            </li>
+            <li class="rule">
+              <img
+                class="rule__icon"
+                src="https://img.icons8.com/fluent/50/000000/cash-in-hand.png"
+              />
+              <span class="rule__text"
+                >Actividades comerciales sin permiso.</span
+              >
+            </li>
+            <li class="rule">
+              <img
+                class="rule__icon"
+                src="https://img.icons8.com/fluent/48/000000/subwoofer.png"
+              />
+              <span class="rule__text">Reproducir música a volumen alto.</span>
+            </li>
+            <li class="rule">
+              <img
+                class="rule__icon"
+                src="https://img.icons8.com/fluent/50/000000/bicycle.png"
+              />
+              <span class="rule__text">
+                Manejar bicicletas, patines o similares en las gradas o zonas
+                peatonales.
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <picture class="logo-footer-container">
+        <img
+          src="./img/logo-white-background.png"
+          alt="Logo del Malecón"
+          class="logo-footer"
+        />
+      </picture>
+      <p>2021 &copy; Malecón del Río</p>
+    </footer>
+
+    <script src="./scripts.js"></script>
+  </body>
+</html>
